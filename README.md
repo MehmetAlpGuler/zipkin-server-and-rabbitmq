@@ -33,11 +33,24 @@ http://localhost:9411/zipkin
     }
 ```
 
+- run rabbitmq
+```
+    cd /docker/rabbitmq
+    docker-compose up -d
+```
+
+- run zipkin server
+```
+    cd /docker/zipkin
+    docker-compose up -d
+```
+
+
 - All microservices should running. Check from eureka!
 http://localhost:8761/
 ![](images/eureka.png)
 
-- send one request
+- send a request
 
 http://localhost:8100/currency-converter-feign/from/EUR/to/INR/quantity/10000
 
